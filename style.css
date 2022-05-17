@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --max-width: 62.1875rem;
+  --padding: 0 1.875rem;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+}
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+}
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+.nav-container a {
+  color: black;
+}
+.website a {
+  font-weight: bold;
+  color: #00376b;
+}
+
+main {
+  margin-top: 5.5rem;
+  padding: var(--padding);
+}
+.section-profile {
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  flex: 1 1 9.375rem;
+  height: 9.375rem;
+  clip-path: circle();
+  width: 9.375rem;
+  background-color: #dbdbdb;
+}
+.profile-info {
+  flex: 2 1 2rem;
+}
+.username {
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.profile-engagement {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+.profile-engagement li {
+  margin-right: 2rem;
+}
+.profile-summary {
+  line-height: 1.5rem;
+}
+.name,
+.num {
+  font-weight: 700;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.3125rem, max-content));
+  row-gap: 1.75rem;
+  column-gap: 1.75rem;
+  justify-content: center;
+}
+.image-wrapper {
+  position: relative;
+  display: flex;
+  width: 18.3125rem;
+  height: 18.3125rem;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.image-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.image-info::after {
+  content: "  ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+  background-color: black;
+}
+.image-info.visible {
+  opacity: 1;
+}
+.like-info,
+.comment-info {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  z-index: 1;
+}
+.like-icon-wrapper,
+.comment-icon-wrapper {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+@media (max-width: 564px) {
+  .section-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
