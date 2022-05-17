@@ -104,9 +104,9 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: transparent;
   display: flex;
   justify-content: center;
+  background-color: transparent;
   align-items: center;
   opacity: 0;
 }
@@ -116,11 +116,11 @@ main {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
   background-color: black;
 }
 .image-info.visible {
   opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 .like-info,
 .comment-info {
